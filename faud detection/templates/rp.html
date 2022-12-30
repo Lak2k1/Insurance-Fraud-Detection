@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Fraud Detection</title>
+</head>
+
+<body style="background-color:rgb(176, 233, 197);">
+    <form action="/pred" method="post" for="form">
+        <center><h1><i><em>Insurance Fraud Detection </em></i></h1></center>
+        <h3>Personal Info:</h3>
+        <label>Months as customer:</label><input type="text" name="month"> 
+        &nbsp;
+        <label>Age:</label><input type="text">
+        <br>
+        <h3>Policy Info:</h3>
+        <label>Policy Number:</label><input type="text">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Policy Bind Date:</label><input type="date">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Policy State:</label>
+        <select name="pstate">
+            <option selected disabled>Select an option</option>
+            <option>OH</option>
+            <option>IN</option>
+            <option>IL</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Policy Deductable:</label><input type="text" name="deductable">
+        &nbsp;
+        <br>
+        <br>
+        <label>Policy CSL(combined single limit):</label>
+        <select name="pcsl">
+            <option selected disabled>Select an option</option>
+            <option value="2">250/500</option>
+            <option value="1">100/300</option>
+            <option value="3">500/1000</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Policy Annual Premium:</label><input type="text" name="PAP">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Umbrella Limit:</label><input type="text" name="UL">
+        <br>
+        <h3>Insurance Details:</h3>
+        <label>Insured Zip:</label><input type="text">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Insured Sex:</label>
+        <select name="insured_sex">
+            <option selected disabled>Select an option</option>
+            <option value="1">MALE</option>
+            <option value="0">FEMALE</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Insured Education Level:</label>
+        <select name="insured_education_level">
+            <option selected disabled>Select an option</option>
+            <option value="1">JD</option>
+            <option value="2">High School</option>
+            <option value="3">College</option>
+            <option value="4">Masters</option>
+            <option value="5">Associate</option>
+            <option value="6">MD</option>
+            <option value="7">PhD</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Insured Occupation:</label>
+        <select name="insured_occupation">
+            <option selected disabled>Select an option</option>
+            <option value="2">Craft Repair</option>
+            <option value="6">Machine Operation Inspctor</option>
+            <option value="11">Sales</option>
+            <option value="1">Armed Forces</option>
+            <option value="12">Tech Support</option>
+            <option value="9">Prof-specialty</option>
+            <option value="8">Private House Servant</option>
+            <option value="3">Executive Managerial</option>
+            <option value="10">Protective Service</option>
+            <option value="13">Transport moving</option>
+            <option value="5">Handlers-Cleaners</option>
+            <option value="0">adm-clerical</option>
+            <option value="4">farming-fishing</option>
+            <option value="7">Other Service</option>
+        </select>
+        <br>
+        <br>
+        <label>Insured Hobbies:</label>
+        <select name="insured_hobbies">
+            <option selected disabled>Select an option</option>
+            <option>sleeping</option>
+            <option>reading</option>
+            <option>board-games</option>
+            <option>bungie-jumping</option>
+            <option>base-jumping</option>
+            <option>golf</option>
+            <option>camping</option>
+            <option>dancing</option>
+            <option>skydiving</option>
+            <option>movies</option>
+            <option>hiking</option>
+            <option>yachting</option>
+            <option>paintball</option>
+            <option>chess</option>
+            <option>kayaking</option>
+            <option>polo</option>
+            <option>basketball</option>
+            <option>video-games</option>
+            <option>cross-fit</option>
+            <option>exercise</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Insured Relationship:</label>
+        <select name="insured_relationship">
+            <option selected disabled>Select an option</option>
+            <option value="4">Unmarried</option>
+            <option value="0">Husband</option>
+            <option value="5">Wife</option>
+            <option value="3">Own Child</option>
+            <option value="2">Other Relative</option>
+            <option value="1">Not in Family</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        <label>Capital Gains:</label><input type="text" name="cg">
+        &nbsp;&nbsp;&nbsp;
+        <label>Capital Loss:</label><input type="text" name="cl">
+        <br>
+        <h3>Incident Wherabouts:</h3>
+        <label>Incident Date:<input type="date">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Incident Type:</label>
+            <select name="incident_type">
+                <option selected disabled>Select an option</option>
+                <option value="2">Single Vehicle Collision</option>
+                <option value="0">Multi-vehicle Collision</option>
+                <option value="3">Vehicle Theft</option>
+                <option value="1">Parked Car</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label>Collision Type:</label>
+            <select name="collision_type">
+                <option selected disabled>Select an option</option>
+                <option value="2">Side Collision</option>
+                <option value="1">Rear Collision</option>
+                <option value="0">Front Collision</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label>Incident Severity:</label>
+            <select name="incident_severity">
+                <option selected disabled>Select an option</option>
+                <option value="3">Major Damage</option>
+                <option value="2">Minor Damage</option>
+                <option value="4">Total Loss</option>
+                <option value="1">Trivial Damage</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label>Authorities Contacted:</label>
+            <select name="authorities_contacted">
+                <option selected disabled>Select an option</option>
+                <option value="4">Police</option>
+                <option value="1">Fire</option>
+                <option value="0">Ambulance</option>
+                <option value="3">Other</option>
+                <option value="2">None</option>
+            </select>
+            <br>
+            <h3>Incident Details:</h3>
+            <label>Incident State:</label>
+            <select name="incident_state">
+                <option selected disabled>Select an option</option>
+                <option>SC</option>
+                <option>VA</option>
+                <option>NY</option>
+                <option>OH</option>
+                <option>WV</option>
+                <option>NC</option>
+                <option>PA</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label>Incident City:</label>
+            <select name="incident_city">
+                <option selected disabled>Select an option</option>
+                <option>Columbus</option>
+                <option>Riverwood</option>
+                <option>Arlington</option>
+                <option>Springfield</option>
+                <option>Hillsdale</option>
+                <option>Northbend</option>
+                <option>Northbrook</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Incident Location:</label><input type="text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Incident Hour Of The Day:</label><input type="text" name="ihotd">
+            &nbsp;&nbsp;&nbsp;
+            <br><br>
+            <label>Number Of Vehicles Involved:</label><input type="text" name="nohi">
+            &nbsp;&nbsp;&nbsp;
+            <label>Property Damage:</label>
+            <select name="property_damage">
+                <option selected disabled>Select an option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label>Bodily Injuries:</label><input type="text" name="binj">
+            &nbsp;&nbsp;&nbsp;
+            <label>Witnesses:</label><input type="text" name="witn">
+            &nbsp;&nbsp;&nbsp;
+            <label>Police Report Available:</label>
+            <select name="police_report_available">
+                <option selected disabled>Select an option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br>
+            <h3>Claims:</h3>
+            <label>Injury Claim:</label><input type="text" name="injclaims">
+            &nbsp;&nbsp;&nbsp;
+            <label>Property Claim:</label><input type="text" name="prclaims">
+            &nbsp;&nbsp;&nbsp;
+            <label>Vehicle Claim:</label><input type="text" name="vclaims">
+            <br>
+            <h3>Automobile Details:</h3>
+            <label>Manufacturer:</label><input type="text">
+            &nbsp;&nbsp;&nbsp;
+            <label>Model:</label><input type="text">
+            &nbsp;&nbsp;&nbsp;
+            <label>Year of manufacturing:</label><input type="month">
+            <br><br><input type="submit">
+
+    </form>
+    <h2 align="center"><mark>{{sn}}</mark></h2>
+</body>
+</html>
