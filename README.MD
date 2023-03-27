@@ -1,9 +1,9 @@
 ### Software And Tools Requirements
 
 1. [Github Account](https://github.com)
-2. [AWSAccount](https://aws.com)
-3. [VSCodeIDE](https://code.visualstudio.com/)
-4. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+2. [VSCodeIDE](https://code.visualstudio.com/)
+3. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 
-link to app-http://ec2-13-113-168-39.ap-northeast-1.compute.amazonaws.com
-  
+This is how the model works, you can try it yourself and find the notebook in the repository.
+
+![](https://github.com/Lak2k1/IFD/blob/main/2023-03-28%2000-52-16.gif)
